@@ -17,8 +17,7 @@
 策略模式定义了算法族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。
 
 
-
-## 观察者模式(Observer Pattern)
+## 观察者模式（Observer Pattern）
 
 出版者 + 订阅者 = 观察者模式
 subject + Observer
@@ -40,3 +39,24 @@ java.util 包内包含最基本的 Observer 接口与 Observable 类，可自由
 4. Observable 将关键方法 protected ，意味着除非继承，否则无法创建 Observable 实例并组合到自己的对象中来
 
 JavaBeans 和 Swing 也实现了观察者模式
+
+
+
+## 装饰者模式
+
+装饰者模式：动态地将责任附加到对象上，若要扩展功能，装饰者提供了比继承更有弹性的替代方案
+
+
+1. 装饰者和被装饰对象有相同的超类型
+2. 可以用一个或多个装饰者包装一个对象
+3. 装饰者可以在所委托被装饰者的行为之前与/或之后，加上自己的行为，以达到特定的目的
+
+LineNumberInputStream => BufferedInputStream => FileInputStream
+
+LineNumberInputStream / BufferedInputStream 都扩展自 FileInputStream
+而 FileInputStream 是一个抽象的装饰类
+
+
+![decorator.java.io.png](src/main/resources/c_decorator.java.io.png)
+
+
