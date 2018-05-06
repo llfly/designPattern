@@ -11,8 +11,8 @@ public class Test {
     public static void main(String[] args) throws IOException {
         int c;
         try {
-            //new FileInputStream("test.txt")
-            InputStream in = new LowerCaseInputStream(new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/test.txt"));
+            //new FileInputStream("PizzaTestDrive.txt")
+            InputStream in = new LowerCaseInputStream(new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/PizzaTestDrive.txt"));
 
             while ((c = in.read()) >= 0) {
                 System.out.print((char) c);

@@ -60,3 +60,16 @@ LineNumberInputStream / BufferedInputStream 都扩展自 FileInputStream
 ![decorator.java.io.png](src/main/resources/c_decorator.java.io.png)
 
 
+## 工厂模式
+找出会变化的部分，把它们从不变的部分中抽离出来
+工厂方法模式：定义了一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法让类把实例化推迟到子类。
+
+
+`abstract Product factoryMethod(String type)`
+
+简单工厂把全部事情在一个地方处理完，工厂方法创建一个框架，让子类决定如何实现。
+
+抽象工厂模式提供一个接口用于创建相关或依赖对象的家族，而不需要明确指定具体类
+
+## 单例模式
+单例模式：确保一个类只有一个实例，并提供一个全局访问点
