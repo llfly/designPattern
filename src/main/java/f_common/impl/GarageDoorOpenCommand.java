@@ -1,7 +1,7 @@
 package f_common.impl;
 
 import f_common.Command;
-import f_common.GarageDoor;
+import f_common.model.GarageDoor;
 
 /**
  * Created by ll on 06/05/2018.
@@ -16,5 +16,13 @@ public class GarageDoorOpenCommand implements Command{
     @Override
     public void execute() {
         garageDoor.up();
+        garageDoor.lightOn();
+    }
+
+    @Override
+    public void undo() {
+        garageDoor.stop();
+        garageDoor.down();
+        garageDoor.lightOff();
     }
 }

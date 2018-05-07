@@ -4,22 +4,22 @@ import f_common.Command;
 import f_common.model.Light;
 
 /**
- * Created by ll on 06/05/2018.
+ * Created by ll on 07/05/2018.
  */
-public class LightOnCommand implements Command{
+public class LightOffCommand implements Command{
     Light light;
 
-    public LightOnCommand(Light light) {
+    public LightOffCommand(Light light) {
         this.light = light;
     }
 
     @Override
     public void execute() {
-        light.on();
+        light.off();
     }
 
     @Override
     public void undo() {
-        light.off();
+        light.on();
     }
 }

@@ -5,4 +5,5 @@ package f_common;
  */
 public interface Command {
     public void execute();
+    public void undo();
 }
