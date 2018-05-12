@@ -103,6 +103,6 @@ LineNumberInputStream / BufferedInputStream 都扩展自 FileInputStream
 4. 对象的任何组件
 
 对比：
-装饰者： 不改变接口，但加入责任
-适配器：将一个接口转成另一个接口
-外观：让接口更简单
+- 装饰者： 不改变接口，但加入责任
+- 适配器：将一个接口转成另一个接口
+- 外观：让接口更简单
