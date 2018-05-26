@@ -1,13 +1,12 @@
-package i_Iterator;
-
-import i_Iterator.IteratorImpl.PancakeHouseMenuIterator;
+package i_Iterator_builtin;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by ll on 16/05/2018.
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
     ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -20,17 +19,13 @@ public class PancakeHouseMenu {
 
     }
 
-
     public void addItem(String name, String description, boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
         menuItems.add(menuItem);
     }
 
-//    public ArrayList getMenuItems() {
-//        return menuItems;
-//    }
-
+    @Override
     public Iterator createIterator() {
-        return new PancakeHouseMenuIterator(menuItems);
+        return menuItems.iterator();
     }
 }
